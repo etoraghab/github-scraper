@@ -16,6 +16,18 @@ let counter = 0;
 let limit = 80000;
 let globalmodel;
 
+file.readdir("./face", (e, f) => {
+  if (e) {
+    console.log("run setup");
+  }
+  file.readdir("./notface", (e, ff) => {
+    if (e) {
+      console.log("run setup");
+    }
+    counter = f.length + ff.length;
+  });
+});
+
 async function getfile(counter) {
   return new Promise(async (r) => {
     if (
