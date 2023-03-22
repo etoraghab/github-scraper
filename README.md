@@ -1,7 +1,15 @@
 ## github scraper
-using tenserflow js to scrape every github profile and classify it as a face or a not, moving it to certain folders
 
-``` bash
+taking user pfps from github api and using tenserflow js to classify them.
+
+```bash
 sh setup.sh
+# or just make 3 folders
+# - github
+# - face
+# - notface
 npm run start
 ```
+
+![](./imgs/ss.png)
+![](./imgs/ss2.png)
