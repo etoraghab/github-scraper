@@ -10,7 +10,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "@tensorflow-models/coco-ssd": "^2.2.2",
-    "@tensorflow/tfjs-node": "^4.2.0"
-  },
-  "devDependencies": {}
+    "@tensorflow/tfjs-node": "^4.2.0",
+    "terminal-kit": "^3.0.0"
+  }
 }
