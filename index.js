@@ -23,7 +23,7 @@ async function getfile(counter) {
       !file.existsSync("./face/" + counter + ".jpg") &&
       !file.existsSync("./notface/" + counter + ".jpg")
     ) {
-      await sleep(1000);
+      // await sleep(1000);
       const filee = file.createWriteStream("./github/" + counter + ".jpg");
       const request = await http
         .get(`https://avatars.githubusercontent.com/u/${counter}`, function (
