@@ -1,6 +1,6 @@
 ## github scraper
 
-taking user pfps from github api and using tenserflow js to classify them.
+taking user pfps from github api and uses tenserflow js to classify them.
 
 ```bash
 sh setup.sh
