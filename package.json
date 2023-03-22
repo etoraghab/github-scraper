@@ -1,0 +1,16 @@
+{
+  "name": "github-scraper",
+  "version": "1.0.0",
+  "description": "a github scaper that takes up the profiles of users and classifies into faces or not faces",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "atordvairn",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.2",
+    "@tensorflow/tfjs-node": "^4.2.0"
+  },
+  "devDependencies": {}
+}
