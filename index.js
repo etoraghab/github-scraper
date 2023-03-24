@@ -60,7 +60,7 @@ let progressBar;
 
 async function download(c, l) {
   return new Promise(async (r) => {
-    await sleep(100)
+    await sleep(1)
     if (
       fs.existsSync(`./github/${c}.jpg`) ||
       fs.existsSync(`./face/${c}.jpg`) ||
@@ -76,6 +76,7 @@ async function download(c, l) {
         file.on("finish", async () => {
           file.close();
           await fs.promises.readFile(`./github/${c}.jpg`).then(async (d) => {
+            tf.engine().startScope()
             let img = await tf.node.decodeImage(new Uint8Array(d), 3);
             await model.detect(img).then((res) => {
               if (res[0] && res[0].class == "person") {
@@ -83,6 +84,7 @@ async function download(c, l) {
               } else {
                 fs.promises.rename(`./github/${c}.jpg`, `./notface/${c}.jpg`);
               }
+              tf.engine().endScope()
               r();
             });
           });
