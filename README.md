@@ -8,7 +8,8 @@ sh setup.sh
 # - github
 # - face
 # - notface
-npm run start
+npm run start [limit]
+# limit is how many images you want downloaded
 ```
 
 ![](./imgs/ss.png)
